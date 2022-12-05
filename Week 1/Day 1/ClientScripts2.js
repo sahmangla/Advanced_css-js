@@ -1,1 +1,0 @@
-alert("Welcome to ClientScripts2.js");
