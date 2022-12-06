@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">CART DETAILS</h1>
+    <hr>
+    <br>
+    <div style="width:40%;margin:auto;border:2px solid black;padding:10px">
+    Product Name:
+    <input style="width:100%;"type="text" id="t1">
+    <br><br>
+    Unit Price:
+    <input style="width: 100%;"type="number" id="t2">
+    <br><br>
+    Quantity:
+    <input style="width:100%"type="number" id="t3">
+    <br><br>
+    <div style="text-align:center">
+    <input type="button" onclick="f2()" value="Get Amount" style="padding:5px; background-color:greenyellow;width:25%;margin:auto;">
+    </div>
+    <br>
+    <p style="font-size:24px"id="p1"></p>
+    </div>
+    <script>
+        function f2()
+        {
+            var textObj1=document.getElementById("t1");
+            var textObj2=document.getElementById("t2");
+            var textObj3=document.getElementById("t3");
+            var result=document.getElementById("p1");
+
+            result.innerHTML="Total Amount :"+(textObj2.value)*(textObj3.value);
+
+        }
+    </script>
+</body>
+</html>
