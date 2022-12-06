@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    
+    
+</head>
+<body>
+    <h1 align="center">JavaScript Programming -- DOM </h1>
+    <hr/>
+    <div style="width:40%;margin:auto">
+    
+    <fieldset >
+    <legend style="font-size:25px;padding:10px;">User Login</legend>
+    
+    User Name  :  <input type="text"  id="t1" style="width:100%" />
+    <br/><br/>
+    
+    Password  :  <input type="password"  id="t2"  style="width:100%"  />
+    <br/> <br>
+    <div style="text-align:center">
+    <input  type="button"  value="Login" onclick="f1()" style="width:25%;background-color:greenyellow; padding:5px;margin:auto"/>
+    </div>
+    <p style="font-size: 23px;"id="p1"></p>
+     </fieldset>
+     </div>
+    <script>
+        function f1()
+        {
+            var textObj1=document.getElementById("t1");
+            var textObj2=document.getElementById("t2");
+            var paraObj=document.getElementById("p1");
+            var list=[{name:"sahil",pass:"sahil334"},{name:"hemant",pass:"hemant233"},{name:"kritika",pass:"kritika5553"},{name:"samridhi",pass:"samridhi344"}];
+            var result=false;
+            var index;
+            for(var i=0;i<4;i++)
+            { if(textObj1.value==list[i].name&& textObj2.value==list[i].pass)
+                {
+                    result=true;
+                    index=i;
+                    break;
+                }
+            }
+            if(result==true)
+            {
+                paraObj.style.color="green";
+                paraObj.innerHTML="Welcome "+ list[index].name;
+            }
+            else{
+                paraObj.style.color="red";
+                paraObj.innerHTML="Invalid User Name or Password";
+            }      
+        }
+    </script>
+
+</body>
+</html>
