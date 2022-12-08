@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">MODELS FOR DIFFERENT COMPONENTS</h1>
+    <hr>
+    <br>
+    <span style="font-size: 24px;">Product Name:-  </span> <select style="font-size: 20px; padding:5px;" onchange="f()"">
+        <option value="0" selected>Laptops</option>
+        <option value="1">Mobile Phones</option>
+        <option value="2">Sound Systems</option>
+    </select>
+    <br>
+    <ul style="font-size: 20px;"id="list">
+        <li>Dell</li>
+        <li>HP</li>
+        <li>Lenovo</li>
+        <li>Apple</li>
+    </ul>
+    <script>
+        var Laptops=["Dell","HP","lenovo","Apple"];
+        var Mobile_Phones=["Samsung","Vivo","Oppo","MI","OnePlus"];
+        var Sound_System=["Zebronics","JBL","BOat"];
+        var listObj=document.getElementById("list");
+        function f()
+        {
+            var x=event.target.value;
+            f2(x);
+           
+        }
+        function f2(x)
+        {
+            if(x==0)
+            {
+                listObj.innerHTML="";
+                for(var i=0;i<Laptops.length;i++)
+                {
+                listObj.innerHTML+="<li>"+Laptops[i]+"</li>";
+                }
+            }
+            else if(x==1)
+            {
+                listObj.innerHTML="";
+                for(var i=0;i<Mobile_Phones.length;i++)
+                {
+                listObj.innerHTML+="<li>"+Mobile_Phones[i]+"</li>";
+                }
+            }
+            else{
+                listObj.innerHTML="";
+                for(var i=0;i<Sound_System.length;i++)
+                {
+                listObj.innerHTML+="<li>"+Sound_System[i]+"</li>";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
