@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ALL ANSWERS IN THE CONSOLE -->
+    <script>
+        var arr=[3,6,5,3,45,7,8,9,43,6,43,64,76,86];
+        var n=arr.length;
+        var result=even(arr,n);
+      
+        
+        function even(arr,n)
+        {
+            var x=0;
+            var arr1=[];
+            var z=0;
+            for(var i=0;i<n;i++)
+            {
+                if(arr[i]%2==0)
+                {
+                    x++;
+                    arr1.push(arr[i]);
+                    z++;
+                }
+            }
+            return arr1;
+        }
+
+        var number1=4;
+        var number2=4;
+        var result2=power(number1,number2);
+        
+        function power(x,y)
+        {
+            var z=1;
+            for(var i=0;i<y;i++)
+            {
+                z*=x;
+            }
+            return z;
+        }
+        var string="sahil";
+        var result3=count(string);
+       
+        function count(string)
+        {
+            return string.length;
+        }
+        console.log("Even numbers in array: "+result);
+        console.log("Count of Even Number : "+result.length);
+        console.log(number1+" to the power "+number2 + " is : "+result2);
+        console.log("Length of string is : "+result3);
+    </script>
+</body>
+</html>

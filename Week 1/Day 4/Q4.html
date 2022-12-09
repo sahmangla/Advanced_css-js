@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ALL ANSWERS IN THE CONSOLE -->
+    <script>
+        function threechar(x)
+         {
+            var n=x.length;
+            var str="";
+            for(var i=0;i<3;i++)
+            {
+                str+=x[i];
+            }
+            return str;
+         }
+         var citiesArray=["Hyderabad","Mumbai","Bangalore","Gurgaon"];
+         var arr1=citiesArray.map(x=>x.toUpperCase());
+         
+         var arr2=citiesArray.map(threechar);
+         
+         var arr3=citiesArray.map(function(x)
+         {
+            var n=x.length;
+            var str="";
+            for(var i=0;i<n;i++)
+            {
+                if(x[i]=="a")
+                {
+                    str+="@";
+                }
+                else{
+                    str+=x[i];
+                }
+            }
+            return str;
+         }
+         );
+         console.log(arr1);
+         console.log(arr2);
+         console.log(arr3);
+         var arr4=citiesArray.map(x=>{var n=x.length;
+            var str="";
+            for(var i=0;i<n;i++)
+            {
+                if(x[i]=="a")
+                {
+                    str+="@";
+                }
+                else{
+                    str+=x[i];
+                }
+            }
+            return str;})
+            console.log(arr4);
+
+        
+         
+
+    </script>
+
+</body>
+</html>
