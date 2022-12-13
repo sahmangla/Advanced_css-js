@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+
+            margin-left:20px;
+            padding:5px;
+            color:white;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Employee Details</h1>
+    <hr>
+    EMPLOYEE NO. :  <input type="text" id="EMP"><br><br>
+    EMPLOYEE NAME : <input type="text" id="EMPNA"><br><br>
+    JOB : <input type="text" id="JOB"><br><br>
+    SALARY : <input type="text" id="SALARY"><br><br>
+    DEPARTMENT : <input type="text" id="DEPART"><br><br>
+
+    <br>
+
+    <button type="button" onclick="get1()">GET TABLE</button>
+    <br><br>    
+    <input type="text" id="search" value="33">
+    <button type="button" onclick="get()">Get data by empl no.</button>
+    <button type="button" onclick="get2()">Get data by job </button>
+    
+    <br><br>
+    <table id="tab" border="2" cellpadding="10" cellspacing="3"> 
+        <tr>
+            <th>EMPNO</th>
+            <th>EMPNAME</th>
+            <th>JOB</th>
+            <th>Salary</th>
+            <th>Department</th>
+        </tr>
+    </table>
+    <script>
+        var textObj=document.getElementById("search");
+        var obj=[{empno:34,empname:"sahil",job:3,salary:3849,department:32},
+        {empno:33,empname:"rohit",job:3,salary:98437,department:34},
+        {empno:32,empname:"hemant",job:4,salary:98437,department:34},
+        {empno:31,empname:"samridhi",job:5,salary:98437,department:34},
+        {empno:30,empname:"kritika",job:3,salary:98437,department:34},
+        {empno:29,empname:"kunal",job:4,salary:98437,department:34},
+        {empno:28,empname:"ayush",job:5,salary:98437,department:34}];
+        var tableObj=document.getElementById("tab");
+        function get()
+        {
+        var result=textObj.value;
+        var index=obj.find(x=>x.empno==result);
+        tableObj.innerHTML=`<tr><th>EMPNO</th><th>EMPNAME</th><th>JOB</th><th>Salary</th><th>Department</th></tr>`;
+        // tableObj.innerHTML+=`<tr><td>${index.empno}</td><td>${index.empname}</td><td>${index.job}</td><td>${index.salary}</td><td>${index.department}</td></tr>`;
+            var row=tableObj.insertRow();
+            var cell1=row.insertCell();
+            cell1.innerHTML=index.empno;
+            var cell2=row.insertCell();
+            cell2.innerHTML=index.empname;
+            var cell3=row.insertCell();
+            cell3.innerHTML=index.job;
+            var cell4=row.insertCell();
+            cell4.innerHTML=index.salary;
+            var cell5=row.insertCell();
+            cell5.innerHTML=index.department;
+    }
+        function get2()
+        {
+            var result=textObj.value;
+            var arr=obj.filter(x=>x.job==result);
+            tableObj.innerHTML=`<tr><th>EMPNO</th><th>EMPNAME</th><th>JOB</th><th>Salary</th><th>Department</th></tr>`;
+            for(let index of arr)
+            {
+                var row=tableObj.insertRow();
+            var cell1=row.insertCell();
+            cell1.innerHTML=index.empno;
+            var cell2=row.insertCell();
+            cell2.innerHTML=index.empname;
+            var cell3=row.insertCell();
+            cell3.innerHTML=index.job;
+            var cell4=row.insertCell();
+            cell4.innerHTML=index.salary;
+            var cell5=row.insertCell();
+            cell5.innerHTML=index.department;
+                // tableObj.innerHTML+=`<tr><td>${index.empno}</td><td>${index.empname}</td><td>${index.job}</td><td>${index.salary}</td><td>${index.department}</td></tr>`;
+            }
+        }
+        function get1()
+        {
+            var empObj=document.getElementById("EMP").value;
+            var empnamObj=document.getElementById("EMPNA").value;
+            var jobObj=document.getElementById("JOB").value;
+            var salaryObj=document.getElementById("SALARY").value;
+            var departObj=document.getElementById("DEPART").value;
+            tableObj.innerHTML=`<tr><th>EMPNO</th><th>EMPNAME</th><th>JOB</th><th>Salary</th><th>Department</th></tr>`;
+            if(empObj=="" || empnamObj=="" || jobObj=="" || salaryObj=="" || departObj=="")
+            { alert("VALUE IS EMPTY SO CAN'T ADD");}
+            else{
+            obj.push({empno:empObj,empname:empnamObj,job:jobObj,salary:salaryObj,department:departObj});
+            }
+            for(let index of obj)
+            {
+            var row=tableObj.insertRow();
+            var cell1=row.insertCell();
+            cell1.innerHTML=index.empno;
+            var cell2=row.insertCell();
+            cell2.innerHTML=index.empname;
+            var cell3=row.insertCell();
+            cell3.innerHTML=index.job;
+            var cell4=row.insertCell();
+            cell4.innerHTML=index.salary;
+            var cell5=row.insertCell();
+            cell5.innerHTML=index.department;
+                // tableObj.innerHTML+=`<tr><td>${index.empno}</td><td>${index.empname}</td><td>${index.job}</td><td>${index.salary}</td><td>${index.department}</td></tr>`;
+            }
+        }
+    </script>
+</body>
+</html>
