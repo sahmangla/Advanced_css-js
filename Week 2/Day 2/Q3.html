@@ -1,0 +1,42 @@
+
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<h1 align="center">Asynchronous Programming in  JavaScript</h1>
+	<hr/> 
+	
+	<button  onclick="fn_getData()">Get Data </button>
+	<br/><br/>
+	<table id="tab" cellspacing="0" cellpadding="10"></table>
+	 
+	 
+	<script>	 
+	function fn_getData()
+	{
+		var tableObj = document.getElementById("tab");
+		
+		let url = "https://www.w3schools.com/angular/customers.php";
+		
+		fetch(url).then(  (response)  => 
+		{
+			   response.json().then(  (resData)  =>  
+				{
+			
+					tableObj.setAttribute("border","1");
+					tableObj.innerHTML = `<tr><th>Name</th><th>City</th><th>Country</th></tr>`;
+
+					
+					for(let item of   resData.records)
+					{
+						tableObj.innerHTML  +=  `<tr><td>${item.Name}</td><td>${item.City}</td><td>${item.Country}</td></tr>`;
+					}
+					
+						
+				});
+		});  
+	}  
+	</script>	 
+</body>
+</html>

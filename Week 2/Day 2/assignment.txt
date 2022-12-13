@@ -1,0 +1,36 @@
+1. What is setInterval()  and setTimeout() methods in JavaScript?
+setTimeout():-
+---------------
+JavaScript setTimeout() calls a method after a certain period of milliseconds have passed. The method is only called once. 
+The setTimeout() method lets you introduce delays into your code.
+
+Let’s take a look at the syntax for this method:
+window.setTimeout(function, time);
+
+The two parameters accepted by setTimeout are:
+
+function : The function you want to execute after a period of time has passed.
+time : The amount of time your program should wait before executing a function.
+
+setInterval():-
+---------------
+
+The JavaScript setInterval() method calls a function repeatedly. A specified delay is set between each time a function is called.
+
+setInterval() uses a similar syntax to setTimeout():
+window.setInterval(function, time);
+
+You must specify two parameters to use setInterval:
+
+function: The function that will be executed.
+time: The time between each call of the function you have specified.
+
+
+2. What is Asynchronous?
+The async attribute is a boolean attribute.
+
+If the async attribute is set, the script is downloaded in parallel to parsing the page, and executed as soon as it is 
+available. The parsing of the page is interrupted once the script is downloaded completely, and then the script is executed, 
+before the parsing of the rest of the page continues.
+
+Note: The async attribute is only for external scripts (and should only be used if the src attribute is present).
