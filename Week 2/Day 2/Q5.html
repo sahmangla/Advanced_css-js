@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">GET DATA</h1>
+    <hr>
+    <button type="button" onclick="fn()"> Get Data</button>
+    <br><br>
+    <table id="dsa"  cellpadding="10" cellspacing="0">
+    
+    </table>
+    <script>
+        async function fn()
+        {
+            var tableObj=document.getElementById("dsa");
+            tableObj.setAttribute("border","2");
+            try{
+                var url="https://www.w3schools.com/angular/customerss.php";
+                var response=await fetch(url);
+                var resdata=await response.json();
+                for(let item of resdata.records)
+                {
+                    tableObj.innerHTML+=`<tr><td>${item.Name}</td><td>${item.City}</td><td>${item.Country}</td></tr>`;
+                }
+            }
+            catch(error)
+            {
+                tableObj.innerHTML="<tr><td>"+error+"</td></tr>";
+            }
+        }
+    </script>
+
+</body>
+</html>
