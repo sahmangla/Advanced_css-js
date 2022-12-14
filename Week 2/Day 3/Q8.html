@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Jquery AD Works</h1>
+    <hr>
+    <div style="text-align:center">
+    <input type="button" id="btn" value="Get Data" style="padding:10px 30px; ">
+    <br><br>
+    <img  id="imgobj" width="400px" height="400px" src="images1.jpg">
+</div>
+    <script  src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+        var s=0;
+        function count()
+        {
+            s++;
+           
+            if(s>Math.ceil(Math.random()*5))
+            {
+                var x=Math.ceil(Math.random()*5);
+                console.log(x);
+               
+                var str="images"+x+".jpg";
+              
+                $("#imgobj").attr("src",str);
+                s=0;
+            }
+           
+        }
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                setInterval(count,1000);
+            });
+
+            })
+    </script>
+</body>
+</html>

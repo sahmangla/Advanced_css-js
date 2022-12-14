@@ -1,0 +1,34 @@
+1.  How to hide html element using JavaScript?
+Hiding an HTML element can be performed in different ways in JavaScript.The three most popular ways of doing it are −
+a) Using the hidden property
+   SYNTAX: document.getElementById('element').hidden = true
+b) Using the style.display property
+   SYNTAX: document.getElementById('element').style.display = 'none'
+c) Using the style.visibility property
+   SYNTAX: document.getElementById('element').style.visibility = 'hidden'
+ 
+
+2. How to change text color of all paragraphs in the document using JavaScript?
+Using querySelectorAll() we'll select all the paragraphs in the document.Then we'll use a for loop and change the text color 
+using element.style.color property.
+For Eg.
+	var x=querySelectorAll("p");
+	for(let item of x)
+	{
+		item.style.color="red";
+	}	 
+
+
+3. How to change text color of all paragraphs in the document using jquery?
+Using querySelectorAll() we can select all the paragraphs in the document.
+Syntax:  $("p").css("color","blue");
+
+
+5.How to select all textboxes using jQuery selector?
+SYNTAX:$("input"[type='text'])
+ 
+
+6.What is the difference between   "this" and  $(this) in jquery programming?
+The this Keyword is a reference to DOM elements of invocation. We can call all DOM methods on it. $() is a jQuery constructor
+and in $(this), we are just passing this as a parameter so that we can use the jQuery function and methods.
+

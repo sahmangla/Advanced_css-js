@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>GET DETAILS FROM THE USER</h1>
+    <hr>
+    <br>
+    <div style="width:30%;margin:auto;padding:15px;border:1px solid blue;font-size: 1.5rem;background-color: whitesmoke;">
+    Product Name : 
+    <input type="text" id="t1" >
+    <br><br>
+    Price : 
+    <input type="number" id="t2">
+    <br><br>
+    Quantity : 
+    <input type="number" id="t3">
+    <br><br>
+    Result : 
+    <input type="number" disabled="true" id="t4">
+    <br><br>
+    <div style="text-align:center;">
+    <input type="button" id="b1" value="Get Result" style="color:white;background-color:blue;padding:5px 15px;">
+    </div>
+    </div>
+    <script  src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+
+
+<script>
+    $("h1").attr("align","center");
+    $(document).ready(function()
+    {
+        $("#b1").click(function(){
+            var x=$("#t2").val();
+            var y=$("#t3").val();
+            var z=x*y;
+            if(y>10)
+            {
+                $("#t4").val(z*0.9);
+            }
+            else{
+            $("#t4").val(z);
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

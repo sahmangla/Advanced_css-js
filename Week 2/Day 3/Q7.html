@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{background-color: black;
+    }
+    </style>
+</head>
+<body>
+    <h1 align="center" style="font-size:3rem;color:yellow">Timer</h1>
+    <hr>
+    <br><br>
+    <div>
+    <table id="tab"  style="font-size:6rem;margin:auto;color:white"></table>
+    </div>
+    <div style="text-align:center">
+    <br>
+    <input type="button" value="Set" id="b1" style="padding:5px 15px;margin-right:10px;font-size: 2rem;background-color: green;color:white;border-radius:10px">
+    <input type="button" value="Clear" id="b2" style="padding:5px 15px;margin-left:10px;font-size: 2rem;background-color: red;color:white;border-radius:10px">
+    </div>
+    <script  src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+        function display()
+        {
+          
+                $("#tab").html("<tr><td>"+twodigit(h)+"</td><td> : </td><td>"+twodigit(m)+"</td><td> : </td><td>"+twodigit(s)+"</td></tr>");
+            
+          
+            
+        }
+        function twodigit(x)
+        {
+            if(x<=9){
+                return "0"+x;
+            }
+            return x;
+        }
+        function count()
+        {
+            s++;
+            if(s>59)
+            {
+                m++;
+                s=0;
+            }
+            if(m>59)
+            {
+                m=0;
+                s=0;
+                h++;
+            }
+            display(); 
+        }
+        function reset()
+        {
+            s=0;
+         m=0;
+         h=0;
+        display();
+        }
+        var s=0;
+        var m=0;
+        var h=0;
+      
+        $("#tab").attr("border","2");
+        $("#tab").attr("cellpadding","10");
+        $("#tab").attr("cellspacing","0");
+        display();
+        var count2=0;
+        $("#b2").click(function(){
+            count2++;
+            if(count2<2)
+            {
+            clearInterval(x);
+            reset();
+            count1=0;
+            }
+        
+        })
+        
+    var count1=0;
+        $("#b1").click(function(){
+            count1++;
+            if(count1<2)
+            {
+             x=setInterval(count,1000);
+             count2=0;
+            }
+        })
+        
+    </script>
+</body>
+</html>
