@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Product With Quantity 0</h1>
+    <hr>
+    <table id="tab" border="2" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Products</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Headphones</td>
+            <td>23425</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Calculator</td>
+            <td>234</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Cricket Bat</td>
+            <td>2345</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Mobile Phones</td>
+            <td>232849</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Bag</td>
+            <td>2342</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bottle</td>
+            <td>2425</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Chair</td>
+            <td>23425</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Table</td>
+            <td>50425</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Black-Board</td>
+            <td>234250</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Duster</td>
+            <td>50</td>
+            <td>0</td>
+        </tr>
+    </table>
+    <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#tab tr").each(function(){
+                var qty=$(this).children().eq(2).html();
+                console.log(qty);
+                if(qty==0)
+                {
+                    $(this).css("background-color","pink");
+                }
+                else{
+                    $(this).css("background-color","lightgreen")
+                }
+            })
+            $("#tab tr:first").css("background-color","red");
+            $("#tab tr:first").css("color","white");
+            $("#tab tr:last").css("background-color","blue");
+            $("#tab tr:last").css("color","white");
+           
+        })
+    </script>
+</body>
+</html>
