@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            font-weight: bold;
+        }
+        .i{
+            font-style: italic;
+        }
+        .u{
+            text-decoration: underline;
+        }
+        .c1{
+            background-color: black;
+            color:white;
+        }
+        input{
+            padding:5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Apply styles class using Jquery</h1>
+    <hr>
+    <input type="button" id="b1" value="B">
+    <input type="button" id="b2" value="U">
+    <input type="button" id="b3" value="I">
+    <br><br>
+    <p style="border:1px solid blue;padding:10px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus totam sit culpa debitis autem facilis, ratione repellendus optio iste, illo nostrum magni cumque beatae ipsam adipisci modi tempore id eum quia? Accusantium incidunt pariatur quae saepe iusto, temporibus, velit eius nihil quo mollitia ab totam! Ab maiores saepe ex neque!</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+ 
+    $(document).ready(function(){
+      
+
+        
+       
+        $("#b1").click(function(){
+         $(this).toggleClass("c1");
+            $("p").toggleClass("b");
+        })
+        $("#b2").click(function(){
+         
+            $(this).toggleClass("c1");
+            $("p").toggleClass("u");
+        })
+        $("#b3").click(function(){
+         
+            $(this).toggleClass("c1");
+            $("p").toggleClass("i");
+        })
+    })
+</script>
+</body>
+</html>
