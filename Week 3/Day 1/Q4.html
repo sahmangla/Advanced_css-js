@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">CREDIT CARD INFORMATION</h1>
+    <hr>
+    <br>
+    <input type="button" id="b1" value="Get Data">
+    <br><br>
+    <table id="tab"  cellpadding="10" cellspacing="0"></table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            function mon(x)
+            {
+                switch(x)
+                {
+                    case 1:
+                        return "Jan";
+                    case 2:
+                        return "Feb";
+                    case 3:
+                        return "Mar";
+                    case 4:
+                        return "Apr";
+                    case 5:
+                        return "May";
+                    case 6:
+                        return "Jun";
+                    case 7:
+                        return "Jul";
+                    case 8:
+                        return "Aug";
+                    case 9:
+                        return "Sep";
+                    case 10:
+                        return "Oct";
+                    case 11:
+                        return "Nov";
+                    case 12:
+                        return "Dec";
+                   
+                }
+            }
+            $("#b1").click(function(){
+                $("#tab").attr("border","1");
+                var obj = {  cardNumber  :   1234456778997896,  chName : "Narasimha Rao",  cardType : "Visa",  expireMonth : 12,  expireYear : 2023};
+                var regexp=/[0-9]/g;
+                var cn=obj.cardNumber.toString();
+                var str1=cn.slice(-4);
+                var str2=cn.slice(0,-4);
+                var x=str2.replace(regexp,'*');
+                var strname=x+str1;
+                var arr=strname.split('');
+                var main='';
+                for(let i=0;i<arr.length;i++)
+                {   main+=arr[i];
+                    if(i==3||i==7||i==11)
+                    {
+                        main+='-';
+                    }
+                }
+                
+                tablestr="";
+                tablestr+="<tr><th>Credit Card Number</th>";
+                tablestr+="<td>"+main+"</td></tr>";
+                tablestr+="<tr><th>Customer Name</th>";
+                tablestr+="<td>"+obj.chName+"</td></tr>";
+                tablestr+="<tr><th>Card Type</th>";
+                tablestr+="<td>"+(obj.cardType).toUpperCase()+"</td></tr>";
+                tablestr+="<tr><th>Expiry Date</th>";
+               
+                tablestr+="<td>"+mon(obj.expireMonth)+" "+(obj.expireYear)+"</td></tr>";
+                
+                $("#tab").html(tablestr);
+            })
+        })
+       
+    </script>
+</body>
+</html>

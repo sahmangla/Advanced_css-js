@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: lightyellow;
+        }
+        input[type='text']
+        {
+            padding:5px;
+            margin-left:5px;
+        }
+        input[type='button']
+        {
+            padding:5px;
+            margin-left:5px;
+            background-color: blueviolet;
+            color:white;
+        }
+        ul{
+            margin-left:10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Display CSV Values in List Format using jQuery</h1>
+    <hr>
+    <br>
+    <strong>Input String : </strong> 
+    <input type="text" id="t1">
+    <input type="button" id="b1" value="Get Data">
+    <ul id="liset"></ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function()
+            {
+                var str=$("#t1").val();
+                var arr=str.split(',');
+                var str1="";
+                for(let i=0;i<arr.length;i++)
+                {
+                str1 +="<li>"+arr[i].toUpperCase()+"</li>";
+                }
+                 $("#liset").html(str1);
+            })
+        })
+    </script>
+</body>
+</html>

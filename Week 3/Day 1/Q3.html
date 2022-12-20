@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color:red;
+        }
+        input[type='text']
+        {
+            margin-right:10px;
+        }
+    </style>
+</head>
+<body>
+        <h1 align="center">VALIDATION CHECK ON WRITING</h1>
+        <hr>
+        <br>
+        Person Name: 
+        <input type="text" id="t1">
+        <br><br>
+        Contact No.
+        <input type="text" id="t2">
+        <br><br>
+        Vehicle Number : 
+        <input type="text" id="t3">
+        <br><br>
+        City: 
+        <input type="text" id="t4">
+        <br><br>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#t1").keyup(function(){
+                    $("#e1").remove();
+                    $("#ee1").remove();
+                    var t1exp=/^[A-Z a-z]*$/;
+                    var t1exp2=/^[A-Z a-z]{1,10}$/;
+                    var inputtext=$("#t1").val();
+                    if(t1exp.test(inputtext)==false && inputtext.length>0)
+                    {
+                        $(this).after('<span id="e1" class="error">Only Alphabets Value is Allowed</span>');
+                    }
+                    else if(t1exp2.test(inputtext)==false && inputtext.length>0)
+                    {
+                        $(this).after('<span id="ee1" class="error">Max. Characters Allowed are 10</span>');
+                    }
+
+                })
+               
+                $("#t2").keyup(function(){
+                    $("#e2").remove();
+                    var t2exp=/^[8 9][0-9]{9}$/;
+                    var inputtext=$("#t2").val();
+                    if(t2exp.test(inputtext)==false&&inputtext.length>0)
+                    {
+                        $(this).after('<span id="e2" class="error">Invalid Phone Number</span>');
+                    }
+                })
+               
+                $("#t3").keyup(function(){
+                    $("#e3").remove();
+                    var t3exp=/^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$/;
+                    var inputtext=$("#t3").val();
+                    if(t3exp.test(inputtext)==false&&inputtext.length>0)
+                    {
+                        $(this).after('<span id="e3" class="error">Not valid Vehicle Number</span>');
+                    }
+                })
+               
+                $("#t4").keyup(function(){
+                    $("#e4").remove();
+                    var t4exp=/^[A-Z]*$/;
+                    var inputtext=$("#t4").val();
+                    if(t4exp.test(inputtext)==false&&inputtext.length>0)
+                    {
+                        $(this).after('<span id="e4" class="error">Only UPPERCASE Alphabets Allowed</span>');
+                    }
+                })
+            })
+
+
+
+
+
+
+
+           
+            
+          
+           
+
+        </script>
+</body>
+</html>
