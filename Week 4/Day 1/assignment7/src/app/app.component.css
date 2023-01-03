@@ -1,0 +1,46 @@
+#main{
+    background-color: whitesmoke;
+    padding:20px;
+    width:55%;
+    margin:auto
+}
+i{
+    font-size: 1.2rem;
+    margin-right:5px;
+}
+.bi-display-fill{
+    margin-right:20px;
+    font-size: 1.4rem;
+}
+
+#nav{
+    font-size:1.2rem;
+}
+.section{
+    padding:10px;
+    width:85%;
+    line-height: 1.5rem;
+}
+.last{
+    margin-right:20px;
+    display:inline-block;
+}
+a{
+    font-size:1.2rem;
+}
+.foot{
+    padding:30px;
+    background-color:blue;
+    color:white;
+    display:flex;
+    flex-wrap: wrap;
+    font-weight: bolder;
+}
+#foot1{
+    width:60%;
+}
+#foot2{
+    width:37%;
+    text-align:end;
+    font-weight: bolder;
+}
