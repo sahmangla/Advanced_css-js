@@ -1,0 +1,33 @@
+div{
+    background-color: black;
+    color:white;
+    width:40%;
+    margin:auto;
+    padding:10px;
+}
+input[type="button"]
+{
+    margin:auto;
+    width:100%;
+    border-radius:10px;
+    padding:5px;
+    font-size: 1.3rem;
+    color:black;
+    font-weight: bolder;
+    margin:10px 0px;
+}
+span{
+    font-size: 1.3rem;
+}
+input[type="number"]
+{
+    font-size: 1.3rem;
+}
+select{
+    font-size: 1.3rem;
+}
+p{
+    font-size: 1.5rem;
+    color:yellow;
+    
+}
