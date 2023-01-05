@@ -1,0 +1,14 @@
+th{
+    background-color: pink;
+}
+tr{
+    background-color: lightgreen;
+}
+table{
+    width:50%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+span{
+    font-size: 1.3rem;
+}

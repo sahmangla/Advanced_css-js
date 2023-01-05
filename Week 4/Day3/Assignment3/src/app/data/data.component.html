@@ -1,0 +1,24 @@
+<table cellspacing="0" cellpadding="5" border="2" >
+    <tr>
+        <th>S.No.</th>
+        <th>Employee Name</th>
+        <th>Performance Grades</th>
+    </tr>
+    <tr *ngFor="let item of obj">
+        <td>{{item.id}}</td>
+        <td>{{item.name|uppercase}}</td>
+        <td>{{item.grade}}</td>
+    </tr>
+</table>
+<table cellspacing="0" cellpadding="5" border="2">
+    <tr>
+        <th>S.No.</th>
+        <th>Employee Name</th>
+        <th>Performance Grades</th>
+    </tr>
+    <tr *ngFor="let item of obj">
+        <td>{{item.id}}</td>
+        <td>{{item.name|uppercase}}</td>
+        <td>{{item.grade|grades}}</td>
+    </tr>
+</table>

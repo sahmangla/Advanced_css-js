@@ -1,0 +1,13 @@
+th{
+    background-color: pink;
+}
+tr
+{
+    background-color: lightgreen;
+}
+table{
+    float:left;
+    margin:10px;
+    width: 45%;
+    text-align: center;
+}
