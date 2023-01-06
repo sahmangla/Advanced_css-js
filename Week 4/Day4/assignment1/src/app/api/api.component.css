@@ -1,0 +1,10 @@
+div{
+    float:left;
+    width:20%;
+    margin:5px;
+    border:1px solid black;
+    border-radius:5px;
+    padding:10px;
+    text-align:center;
+    background-color:antiquewhite;
+}

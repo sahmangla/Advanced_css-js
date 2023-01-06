@@ -1,0 +1,9 @@
+<button (click)="show_data()">Show Data</button>
+<br><br>
+
+<div *ngFor="let item of result" [hidden]="show">
+   <img src="{{item.avatar}}">
+   <p>ID:  {{item.id}}</p>
+   <p>EMAIL: {{item.email}}</p>
+   <p>NAME: {{item.first_name}} {{item.last_name}}</p>
+</div>

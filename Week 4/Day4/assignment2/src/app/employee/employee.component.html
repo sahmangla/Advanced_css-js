@@ -1,0 +1,30 @@
+<span>
+Name: <input type="text" [(ngModel)]="name">
+<br><br>
+Job: <input type="text" [(ngModel)]="job">
+<br><br>
+Salary: <input type="text" [(ngModel)]="sal">
+<br><br>
+Department: <input type="text" [(ngModel)]="dept">
+<br><br>
+<button (click)="get_data()">Get Data</button>
+<button (click)="add_data()">Add Data</button>
+<br><br>
+</span>
+
+<table border="2" cellspacing="0" cellpadding="10" [hidden]="show">
+    <tr>
+<th>ID</th>
+<th>Name</th>
+<th>Job</th>
+<th>Salary</th>
+<th>Department No.</th>
+    </tr>
+    <tr *ngFor="let item of result">
+        <td>{{item.empno}}</td>
+        <td>{{item.empname}}</td>
+        <td>{{item.job}}</td>
+        <td>{{item.sal}}</td>
+        <td>{{item.deptno}}</td>
+    </tr>
+</table>
