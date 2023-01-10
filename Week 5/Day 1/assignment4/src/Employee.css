@@ -1,0 +1,36 @@
+
+.flex{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 23%;
+    text-align: center;
+}
+.box{
+    box-sizing: border-box;
+    margin:10px;
+    width: 23%;
+    border:1px solid black;
+    border-radius:10px;
+    padding:10px;
+    height:48%;
+    background-color: white;
+}
+.star{
+    width:20px;
+    height:20px;
+    margin:5px;
+    
+}
+.picture{
+    width:100%;
+    height:200px;
+    border-radius:10%;
+}
+button{
+    margin:5px;
+    padding:10px;
+    background-color: antiquewhite;
+    border-radius:10px;
+    
+}
