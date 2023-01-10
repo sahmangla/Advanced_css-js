@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "empno": 1,
+      "empname": "Sahil",
+      "job": "Analyst",
+      "sal": 35555,
+      "deptno": 5
+    },
+    {
+      "empno": 2,
+      "empname": "Hemant",
+      "job": "Manager",
+      "sal": 100000,
+      "deptno": 4
+    },
+    {
+      "empno": 3,
+      "empname": "Kritika",
+      "job": "Senior Manager",
+      "sal": 200000,
+      "deptno": 4
+    },
+    {
+      "empno": 4,
+      "empname": "Samridhi",
+      "job": "Analyst",
+      "sal": 75000,
+      "deptno": 4
+    }
+  ]
+}

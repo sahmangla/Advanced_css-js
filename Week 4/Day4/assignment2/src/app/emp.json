@@ -1,0 +1,39 @@
+{
+  "students": [
+    {
+      "empname": "Sahil Mangla",
+      "job": "Analyst Trainee",
+      "deptno": 4,
+      "sal": 75000,
+      "empno": 1
+    },
+    {
+      "empno": 2,
+      "empname": "Hemant",
+      "job": "Manager",
+      "sal": 100000,
+      "deptno": 4
+    },
+    {
+      "empno": 3,
+      "empname": "Kritika",
+      "job": "Analyst Trainee",
+      "sal": 25000,
+      "deptno": 2
+    },
+    {
+      "empno": 4,
+      "empname": "Samridhi",
+      "job": "Analyst",
+      "sal": 75000,
+      "deptno": 4
+    },
+    {
+      "empname": "Sahil Mangla",
+      "job": "Analyst",
+      "deptno": 4,
+      "sal": 75000,
+      "empno": 5
+    }
+  ]
+}
