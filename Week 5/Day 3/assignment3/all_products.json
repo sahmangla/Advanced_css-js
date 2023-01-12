@@ -1,0 +1,85 @@
+{
+  "results": [
+    {
+      "id": 2,
+      "name": "PRoduct 6",
+      "image": "https://m.media-amazon.com/images/I/71Iq9ug6OvL._AC_UY327_FMwebp_QL65_.jpg",
+      "category": "Phones",
+      "price": "30000",
+      "rating": "4",
+      "discount": "40"
+    },
+    {
+      "id": 3,
+      "name": "PRoduct 6",
+      "image": "https://m.media-amazon.com/images/I/71Iq9ug6OvL._AC_UY327_FMwebp_QL65_.jpg",
+      "category": "Phones",
+      "price": "30000",
+      "rating": "4",
+      "discount": "40"
+    },
+    {
+      "id": 4,
+      "name": "PRoduct 6",
+      "image": "https://m.media-amazon.com/images/I/71Iq9ug6OvL._AC_UY327_FMwebp_QL65_.jpg",
+      "category": "Phones",
+      "price": "30000",
+      "rating": "4",
+      "discount": "40"
+    },
+    {
+      "id": 5,
+      "image": "https://m.media-amazon.com/images/I/81-iy4O5EKL._AC_UY327_FMwebp_QL65_.jpg",
+      "name": "Product 5",
+      "category": "Phones",
+      "price": 50000,
+      "rating": 4,
+      "discount": 40
+    },
+    {
+      "id": 6,
+      "image": "https://m.media-amazon.com/images/I/61EXU8BuGZL._AC_UY327_FMwebp_QL65_.jpg",
+      "name": "Product 6",
+      "category": "Headphones",
+      "price": 1000,
+      "rating": 4,
+      "discount": 10
+    },
+    {
+      "id": 7,
+      "image": "https://m.media-amazon.com/images/I/51fNAukQZEL._AC_UY327_FMwebp_QL65_.jpg",
+      "name": "Product 7",
+      "category": "Headphones",
+      "price": 6000,
+      "rating": 2,
+      "discount": 20
+    },
+    {
+      "id": 8,
+      "image": "https://m.media-amazon.com/images/I/61h-yNsKWuL._AC_UY327_FMwebp_QL65_.jpg",
+      "name": "Product 8",
+      "category": "Phones",
+      "price": 40000,
+      "rating": 3,
+      "discount": 70
+    },
+    {
+      "id": 9,
+      "image": "https://m.media-amazon.com/images/I/71Iq9ug6OvL._AC_UY327_FMwebp_QL65_.jpg",
+      "name": "Redmi Note 11",
+      "category": "Phones",
+      "price": 15000,
+      "rating": 3,
+      "discount": 30
+    },
+    {
+      "id": "10",
+      "image": "https://m.media-amazon.com/images/I/71Iq9ug6OvL._AC_UY327_FMwebp_QL65_.jpg",
+      "name": "PRoduct 6",
+      "category": "Phones",
+      "price": "30000",
+      "rating": "4",
+      "discount": "40"
+    }
+  ]
+}
